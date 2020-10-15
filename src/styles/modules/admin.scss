@@ -1,0 +1,68 @@
+@import "./../common/var.scss";
+@import "./../board/header-box.scss";
+@import "./../board/coverage.scss";
+@import "./../board/edit-slider.scss";
+@import "./../board/canvas.scss";
+@import "./../board/transform-block.scss";
+@import "./../board/options.scss";
+@import "./../board/context-menu.scss";
+// 主体布局
+.dv-admin {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .board-layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #ffffff;
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    .center-box {
+      position: relative;
+      height: 100%;
+      padding-top: 40px;
+      .board-center {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 300px;
+        bottom: 0;
+        transition: right .3s;
+      }
+    }
+  }
+}
+
+.delete-dialog {
+  .bin-modal-content {
+    background: #27343e;
+  }
+  .bin-modal-footer {
+    border-top: 1px solid #3a4659;
+  }
+  .delete-dialog-inner {
+    text-align: center;
+    padding-top: 30px;
+    .iconfont {
+      color: #ff4f43;
+    }
+    p {
+      padding: 10px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
+
+// 覆盖样式
+.bin-modal-mask {
+  background-color: rgba(0, 0, 0, .35);
+}
+

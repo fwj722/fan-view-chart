@@ -1,0 +1,54 @@
+<template>
+  <div class="dv-screen">
+    <el-scrollbar style="height:100%;">
+      <div class="canvas-panel" :style="canvasPanelStyle">
+        <template v-for="transform in canvasMap">
+          <preview-box :key="transform.id" :item="transform">
+            <charts-factory :type-name="transform.packageJson.name"
+                    :config="transform.packageJson.config"
+                    :api-data="transform.packageJson.api_data"
+                    :apis="transform.packageJson.apis"></charts-factory>
+          </preview-box>
+        </template>
+      </div>
+    </el-scrollbar>
+  </div>
+</template>
+
+<script>
+  import { mapGetters } from 'vuex'
+  import { getPageSettings } from '../api/app/app-request'
+  import { getCanvasMaps } from '../api/canvasMaps/canvas-maps-request'
+  import ChartsFactory from '../components/charts/charts-factory'
+  import PreviewBox from '../components/preview/preview-box'
+
+  export default {
+    name: 'screen',
+    components: { ChartsFactory, PreviewBox },
+    data () {
+      return {}
+    },
+    computed: {
+      ...mapGetters(['canvasMap', 'pageSettings']),
+      // 画布面板的样式
+      canvasPanelStyle () {
+        return {
+          width: `${this.pageSettings.width}px`,
+          height: `${this.pageSettings.height}px`,
+          backgroundColor: this.pageSettings.backgroundColor
+        }
+      }
+    },
+    created () {
+      // 拉取页面配置信息
+      getPageSettings().then(res => {
+        this.$store.dispatch('SetPageSettings', res.data)
+        console.log(res.data)
+      })
+      // 拉取页面canvasMaps
+      getCanvasMaps().then(res => {
+        this.$store.dispatch('InitCanvasMaps', res.data)
+      })
+    }
+  }
+</script>

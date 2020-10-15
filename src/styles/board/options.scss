@@ -1,0 +1,300 @@
+@import "../common/var.scss";
+// 右侧参数配置页面
+.board-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: 200;
+  background: #ffffff;
+  box-shadow: -2px 0 2px 0 rgba(0, 0, 0, 0.1);
+  transition: all .3s;
+  transform: translate3d(100%, 0, 0);
+  .header-title {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: $color-admin-ctrl-header;
+  }
+  .tabs {
+    width: 100%;
+    display: flex;
+    height: 30px;
+    line-height: 27px;
+    .tab-item {
+      flex: 1;
+      height: 100%;
+      display: inline-block;
+      text-align: center;
+      background: #27343e;
+      transition: .2s;
+      outline: 0;
+      color: #bcc9d4;
+      font-size: 12px;
+      cursor: pointer;
+      border-top: 2px solid transparent;
+      &.active {
+        background: $color-admin-options-bg;
+        color: $color-primary;
+        border-top: 2px solid $color-primary;
+      }
+      .iconfont {
+        font-size: 16px;
+      }
+    }
+  }
+  .options-body {
+    background: $color-admin-options-bg;
+    height: calc(100% - 30px);
+  }
+  .expand-hover {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 160px;
+    margin-top: -80px;
+    margin-left: -16px;
+    cursor: pointer;
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: $color-admin-options-hover;
+      opacity: 0;
+      transition: all .2s;
+      i {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        top: 50%;
+        margin-top: -9px;
+        &:hover {
+          color: #2d8cf0;
+        }
+      }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+      }
+      &:before {
+        top: 0;
+        margin-top: -16px;
+        border-top: 16px solid transparent;
+        border-right: 16px solid $color-admin-options-hover;
+      }
+      &:after {
+        bottom: 0;
+        margin-bottom: -16px;
+        border-left: 16px solid transparent;
+        border-top: 16px solid $color-admin-options-hover;
+      }
+    }
+    &:hover .inner {
+      opacity: 1;
+    }
+  }
+  &.is-expand {
+    transform: translate3d(0, 0, 0)
+  }
+}
+// 页面设置
+.page-config, .block-config {
+  padding-top: 10px;
+  .gui-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 13px;
+    min-height: 24px;
+    color: $color-text-info;
+    font-size: 12px;
+    .gui-field-name {
+      padding-right: 5px;
+      line-height: 28px;
+    }
+    .gui-field-container {
+      min-height: 24px;
+      display: flex;
+      width: 175px;
+      font-size: 12px;
+      align-items: center;
+      .gui-inline {
+        display: inline-block;
+        width: 85px;
+        .label {
+          color: #647279;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          line-height: 18px;
+          text-align: left;
+        }
+        &:first-child {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .gui-wrap {
+    position: relative;
+    padding-left: 13px;
+    &.disable {
+      color: #647279;
+    }
+    .wrap-name {
+      line-height: 40px;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .wrap-arrow {
+        transition: .3s;
+        &.show {
+          transform: rotate(90deg)
+        }
+        &.simple {
+          cursor: pointer;
+        }
+      }
+      .wrap-label {
+        padding: 0 5px 0 2px;
+      }
+      .wrap-toggle {
+        cursor: pointer;
+      }
+      .iconfont {
+        line-height: normal;
+      }
+    }
+    .gui-field {
+      padding-left: 18px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 18px;
+      bottom: 0;
+      border-left: 1px solid #282f3a;
+    }
+  }
+  .gui-group {
+    .gui-group-name {
+      border-bottom: 1px solid #282f3a;
+      line-height: 26px;
+      cursor: pointer;
+      padding: 4px 5px 6px 18px;
+      text-align: left;
+      font-size: 12px;
+    }
+    .gui-group-content {
+      background: #15171c;
+      padding: 5px 0;
+      .gui-field {
+        padding-left: 20px;
+      }
+    }
+  }
+  .gui-color {
+    display: inline-block;
+    margin: 0 4px 4px 0
+  }
+  .group-title {
+    padding: 0 10px;
+  }
+}
+
+// 需要覆盖bin的样式
+.options-body .bin-scrollbar__wrap {
+  overflow-x: hidden;
+}
+.options-body .bin-collapse-simple {
+  background-color: $color-admin-options-bg;
+}
+
+//  折叠菜单
+.options-body .bin-collapse > .bin-collapse-item > .bin-collapse-header {
+  color: #fff;
+  padding-left: 5px;
+  font-size: 12px;
+  i {
+    margin-right: 0;
+  }
+}
+.options-body .bin-collapse-content {
+  background-color: $color-admin-options-dark;
+  color: $color-text-info;
+  padding: 0;
+  .bin-collapse-content-box {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 12px;
+  }
+}
+
+.options-body .bin-collapse > .bin-collapse-item.bin-collapse-item-active > .bin-collapse-header {
+  border-bottom: 1px solid #282f3a;
+}
+.options-body .bin-collapse {
+  border-top: 1px solid #282f3a;
+  border-bottom: 1px solid #282f3a;
+}
+.options-body .bin-collapse > .bin-collapse-item {
+  border-top: 1px solid #282f3a;
+}
+.options-body .bin-collapse > .bin-collapse-item:first-child {
+  border-top: none;
+}
+// 数字输入框样式覆盖
+.options-body .bin-input-number {
+  width: 85px;
+}
+.options-body .bin-input-number-input {
+  background-color: $color-admin-options-dark;
+  color: $color-text-info;
+}
+.options-body .bin-input-number-handler-wrap {
+  background-color: $color-admin-options-dark;
+}
+// 输入框样式
+.options-body .bin-input {
+  background-color: $color-admin-options-dark;
+  color: $color-text-info;
+}
+
+
+//  覆盖element-ui
+.options-body {
+  .el-color-picker {
+    vertical-align: middle;
+    height: 26px;
+    .el-color-picker__trigger {
+      height: 26px;
+      width: 26px;
+      padding: 2px;
+    }
+    .el-color-picker__color {
+      overflow: hidden;
+      border: none;
+    }
+  }
+
+  .el-input__inner {
+    color: $color-text-info;
+    background-color: $color-admin-options-dark;
+  }
+  .el-select {
+    .el-input__suffix {
+      right: 0
+    }
+    .el-input__inner {
+      padding: 0 15px;
+    }
+  }
+}
+
+
