@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-10-16 09:38:20
+ * @LastEditTime: 2020-10-16 10:35:30
+-->
 <template>
   <div class="gui-wrap" :class="{'disable':!visible && !simple}">
     <div class="wrap-name">
