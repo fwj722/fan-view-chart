@@ -9,8 +9,3 @@
     name: 'App'
   }
 </script>
-<style lang="scss">
-  html{
-    background:red;
-  }
-</style>

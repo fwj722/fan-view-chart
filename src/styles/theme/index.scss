@@ -1,0 +1,19 @@
+$dark-bg:#1b1f25;
+$dark-bg1:#0e1013;
+$dark-border:1px solid #282f3a;
+$font-color:#fff;
+
+
+.el-collapse-item__header{
+  background-color:$dark-bg;
+  border-bottom:$dark-border;
+  border-top: $dark-border;
+  color: $font-color;
+  padding-left: 14px;
+}
+.el-collapse-item__wrap{
+  background-color: #FFF;
+  border-bottom: $dark-border;
+  background-color: $dark-bg1;
+  color: #bcc9d4;
+}

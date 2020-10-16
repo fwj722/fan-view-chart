@@ -118,12 +118,12 @@
     .gui-field-container {
       min-height: 24px;
       display: flex;
-      width: 175px;
+      width: 210px;
       font-size: 12px;
       align-items: center;
       .gui-inline {
         display: inline-block;
-        width: 85px;
+        width: 110px;
         .label {
           color: #647279;
           white-space: nowrap;
@@ -180,8 +180,7 @@
       left: 18px;
       bottom: 0;
       border-left: 1px solid #282f3a;
-    }
-  }
+    }  }
   .gui-group {
     .gui-group-name {
       border-bottom: 1px solid #282f3a;
@@ -209,15 +208,15 @@
 }
 
 // 需要覆盖bin的样式
-.options-body .bin-scrollbar__wrap {
+.options-body .el-scrollbar__wrap {
   overflow-x: hidden;
 }
-.options-body .bin-collapse-simple {
+.options-body .el-collapse-simple {
   background-color: $color-admin-options-bg;
 }
 
 //  折叠菜单
-.options-body .bin-collapse > .bin-collapse-item > .bin-collapse-header {
+.options-body .el-collapse > .el-collapse-item > .el-collapse-header {
   color: #fff;
   padding-left: 5px;
   font-size: 12px;
@@ -225,43 +224,43 @@
     margin-right: 0;
   }
 }
-.options-body .bin-collapse-content {
+.options-body .el-collapse-content {
   background-color: $color-admin-options-dark;
   color: $color-text-info;
   padding: 0;
-  .bin-collapse-content-box {
+  .el-collapse-content-box {
     padding-top: 6px;
     padding-bottom: 6px;
     font-size: 12px;
   }
 }
 
-.options-body .bin-collapse > .bin-collapse-item.bin-collapse-item-active > .bin-collapse-header {
+.options-body .el-collapse > .el-collapse-item.el-collapse-item-active > .el-collapse-header {
   border-bottom: 1px solid #282f3a;
 }
-.options-body .bin-collapse {
+.options-body .el-collapse {
   border-top: 1px solid #282f3a;
   border-bottom: 1px solid #282f3a;
 }
-.options-body .bin-collapse > .bin-collapse-item {
+.options-body .el-collapse > .el-collapse-item {
   border-top: 1px solid #282f3a;
 }
-.options-body .bin-collapse > .bin-collapse-item:first-child {
+.options-body .el-collapse > .el-collapse-item:first-child {
   border-top: none;
 }
 // 数字输入框样式覆盖
-.options-body .bin-input-number {
+.options-body .el-input-number {
   width: 85px;
 }
-.options-body .bin-input-number-input {
+.options-body .el-input-number-input {
   background-color: $color-admin-options-dark;
   color: $color-text-info;
 }
-.options-body .bin-input-number-handler-wrap {
+.options-body .el-input-number-handler-wrap {
   background-color: $color-admin-options-dark;
 }
 // 输入框样式
-.options-body .bin-input {
+.options-body .el-input {
   background-color: $color-admin-options-dark;
   color: $color-text-info;
 }
@@ -298,3 +297,6 @@
 }
 
 
+.el-input-number--mini{
+  width: 100px;
+}

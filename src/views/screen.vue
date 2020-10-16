@@ -21,10 +21,10 @@
   import { getCanvasMaps } from '../api/canvasMaps/canvas-maps-request'
   import ChartsFactory from '../components/charts/charts-factory'
   import PreviewBox from '../components/preview/preview-box'
-
+ import elScrollbar from '@/components/scrollbar/src/main'
   export default {
     name: 'screen',
-    components: { ChartsFactory, PreviewBox },
+    components: { ChartsFactory, PreviewBox,elScrollbar },
     data () {
       return {}
     },

@@ -125,7 +125,7 @@ export function getScrollBarWidth() {
   if (scrollBarWidth !== undefined) return scrollBarWidth
 
   const outer = document.createElement('div')
-  outer.className = 'bin-scrollbar__wrap'
+  outer.className = 'el-scrollbar__wrap'
   outer.style.visibility = 'hidden'
   outer.style.width = '100px'
   outer.style.position = 'absolute'

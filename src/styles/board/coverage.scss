@@ -17,6 +17,10 @@
     height: 30px;
     border-bottom: 2px solid #282f3a;
     opacity: .3;
+    justify-content: center;
+    .context-menu-item{
+      padding: 0 10px;
+    }
     .iconfont {
       padding: 2px;
       font-size: 14px;
@@ -68,6 +72,6 @@
 }
 
 //  需要覆盖bin的样式
-.body-wrap .bin-scrollbar__wrap {
+.body-wrap .el-scrollbar__wrap {
   overflow-x: hidden;
 }

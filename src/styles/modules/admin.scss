@@ -28,6 +28,7 @@
       position: relative;
       height: 100%;
       padding-top: 40px;
+      box-sizing: border-box;
       .board-center {
         position: absolute;
         top: 40px;
@@ -41,10 +42,10 @@
 }
 
 .delete-dialog {
-  .bin-modal-content {
+  .el-modal-content {
     background: #27343e;
   }
-  .bin-modal-footer {
+  .el-modal-footer {
     border-top: 1px solid #3a4659;
   }
   .delete-dialog-inner {
@@ -62,7 +63,7 @@
 }
 
 // 覆盖样式
-.bin-modal-mask {
+.el-modal-mask {
   background-color: rgba(0, 0, 0, .35);
 }
 

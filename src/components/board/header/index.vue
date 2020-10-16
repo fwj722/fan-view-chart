@@ -11,7 +11,7 @@
     </div>
     <div class="right-box">
       <el-tooltip content="预览" placement="bottom">
-        <el-button type="text"><i class="el-icon-view" @click="openScreen"></i></el-button>
+        <i class="el-icon-view" @click="openScreen"></i>
       </el-tooltip>
       <el-tooltip content="发布" placement="bottom">
         <i class="el-icon-s-promotion"></i>
@@ -21,7 +21,9 @@
       </el-tooltip>
         <el-dropdown>
           <span class="el-dropdown-link">
-            <i  class="el-icon-s-platform"></i>
+             <el-tooltip content="主题" placement="bottom">
+               <i  class="el-icon-s-platform theme"></i>
+            </el-tooltip>
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>黄金糕</el-dropdown-item>
@@ -62,5 +64,10 @@
   }
   .el-icon-arrow-down {
     font-size: 12px;
+  }
+  .theme{
+    font-size: 20px;
+    vertical-align: middle;
+    color: white;
   }
 </style>

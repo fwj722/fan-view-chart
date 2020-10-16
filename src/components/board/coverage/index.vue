@@ -22,9 +22,10 @@
 
 <script>
   import { mapGetters } from 'vuex'
-
+  import elScrollbar from '@/components/scrollbar/src/main'
   export default {
     name: 'BoardCoverage',
+    components:{elScrollbar},
     props: {
       config: {
         type: Object,

@@ -50,7 +50,7 @@
     },
     methods: {
       handleDragStart (component, event) {
-        this.$print('drag start:' + component.name, 'primary')
+        // this.$print('drag start:' + component.name, 'primary')
         // 拖拽的节点数据
         let nodeInfo = {
           // 唯一标识
@@ -58,8 +58,8 @@
           packageJson: { ...component }
         }
         event.dataTransfer.setData('node', JSON.stringify(nodeInfo))
-        this.$print('drag nodeInfo', 'success')
-        this.$print(nodeInfo)
+        // this.$print('drag nodeInfo', 'success')
+        // this.$print(nodeInfo)
       }
     }
   }

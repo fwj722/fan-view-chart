@@ -1,8 +1,7 @@
 <template>
   <div class="canvas-main" ref="canvasMain"
        @contextmenu.stop.prevent="hideContextMenu">
-    <div class="canvas-panel-wrap"
-
+    <div class="canvas-panel-wrap" :style="wrapStyle"
          @click.stop.prevent="cancelSelected">
       <el-scrollbar style="height:100%;">
         <div class="screen-shot" :style="screenStyle" ref="screenInner">
@@ -19,13 +18,12 @@
     <edit-slider v-model="range"></edit-slider>
   </div>
 </template>
-<!--:style="wrapStyle"-->
 <script>
   import { addResizeListener, removeResizeListener } from '@/utils/resize-event'
   import EditSlider from './components/edit-slider'
   import DropPanel from '../../drop/drop-panel'
   import { mapActions, mapGetters } from 'vuex'
-
+  import elScrollbar from '@/components/scrollbar/src/main'
   export default {
     name: 'CanvasMain',
     data () {
@@ -94,6 +92,6 @@
         }
       }
     },
-    components: { DropPanel, EditSlider }
+    components: { DropPanel, EditSlider,elScrollbar }
   }
 </script>

@@ -26,12 +26,12 @@
         <div class="page-config" v-if="!currentSelected">
           <gui-field label="屏幕大小">
             <div class="gui-inline">
-              <el-input-number v-model="globalSettings.width" size="mini"
+              <el-input-number v-model="globalSettings.width" controls-position="right" size="mini"
                               @on-change="setPageSetting"></el-input-number>
               <div class="label">宽度</div>
             </div>
             <div class="gui-inline">
-              <el-input-number v-model="globalSettings.height" size="mini"
+              <el-input-number v-model="globalSettings.height" controls-position="right" size="mini"
                               @on-change="setPageSetting"></el-input-number>
               <div class="label">高度</div>
             </div>
@@ -41,7 +41,7 @@
                              @active-change="setPageSetting"></el-color-picker>
           </gui-field>
           <gui-field label="栅格间距">
-            <el-input-number v-model="globalSettings.gridStep" size="mini" :min="2" :max="20"
+            <el-input-number v-model="globalSettings.gridStep" size="mini" controls-position="right" :min="2" :max="20"
                             @on-change="setPageSetting"></el-input-number>
           </gui-field>
           <gui-field label="重置">
@@ -53,21 +53,21 @@
             <gui-group group-name="基础属性">
               <gui-field label="图表尺寸">
                 <gui-inline label="宽度">
-                  <el-input-number v-model="baseProperty.width" size="mini"
+                  <el-input-number v-model="baseProperty.width" size="mini" controls-position="right"
                                   @on-change="setBaseProperty"></el-input-number>
                 </gui-inline>
                 <gui-inline label="高度">
-                  <el-input-number v-model="baseProperty.height" size="mini"
+                  <el-input-number v-model="baseProperty.height" size="mini" controls-position="right"
                                   @on-change="setBaseProperty"></el-input-number>
                 </gui-inline>
               </gui-field>
               <gui-field label="图表位置">
                 <gui-inline label="横坐标">
-                  <el-input-number v-model="baseProperty.x" size="mini"
+                  <el-input-number v-model="baseProperty.x" size="mini" controls-position="right"
                                   @on-change="setBaseProperty"></el-input-number>
                 </gui-inline>
-                <gui-inline label="纵坐标">
-                  <el-input-number v-model="baseProperty.y" size="mini"
+                <gui-inline label="纵坐标"> 
+                  <el-input-number v-model="baseProperty.y" size="mini" controls-position="right"
                                   @on-change="setBaseProperty"></el-input-number>
                 </gui-inline>
               </gui-field>
@@ -78,19 +78,19 @@
                 <el-collapse-item title="全局样式" name="grid">
                   <gui-wrap label="边距" :value="true" simple>
                     <gui-field label="顶部">
-                      <el-input-number v-model="selfConfig.grid.top" size="mini"
+                      <el-input-number v-model="selfConfig.grid.top" size="mini" controls-position="right"
                                       :min="0" :max="60" @on-change="setSelfProperty"></el-input-number>
                     </gui-field>
                     <gui-field label="底部">
-                      <el-input-number v-model="selfConfig.grid.bottom" size="mini"
+                      <el-input-number v-model="selfConfig.grid.bottom" size="mini" controls-position="right"
                                       :min="0" :max="60" @on-change="setSelfProperty"></el-input-number>
                     </gui-field>
                     <gui-field label="左侧">
-                      <el-input-number v-model="selfConfig.grid.left" size="mini"
+                      <el-input-number v-model="selfConfig.grid.left" size="mini" controls-position="right"
                                       :min="0" :max="60" @on-change="setSelfProperty"></el-input-number>
                     </gui-field>
                     <gui-field label="右侧">
-                      <el-input-number v-model="selfConfig.grid.right" size="mini"
+                      <el-input-number v-model="selfConfig.grid.right" size="mini" controls-position="right"
                                       :min="0" :max="60" @on-change="setSelfProperty"></el-input-number>
                     </gui-field>
                   </gui-wrap>
@@ -104,7 +104,7 @@
                   </gui-field>
                   <gui-field label="文本">
                     <gui-inline label="字号">
-                      <el-input-number v-model="selfConfig.title.textStyle.fontSize" size="mini"
+                      <el-input-number v-model="selfConfig.title.textStyle.fontSize" size="mini" controls-position="right"
                                       :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                     <gui-inline label="颜色">
@@ -128,7 +128,7 @@
                   <gui-wrap label="图例" v-model="selfConfig.legend.show" @on-change="setSelfProperty">
                     <gui-field label="文本">
                       <gui-inline label="字号">
-                        <el-input-number v-model="selfConfig.legend.textStyle.fontSize" size="mini"
+                        <el-input-number v-model="selfConfig.legend.textStyle.fontSize" size="mini" controls-position="right"
                                         :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="颜色">
@@ -138,7 +138,7 @@
                     </gui-field>
                     <gui-field label="样式">
                       <gui-inline label="图例间隔">
-                        <el-input-number v-model="selfConfig.legend.itemGap" size="mini"
+                        <el-input-number v-model="selfConfig.legend.itemGap" size="mini" controls-position="right"
                                         :min="0" :max="50" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="图标">
@@ -228,7 +228,7 @@
                   </gui-field>
                   <gui-field label="文本">
                     <gui-inline label="字号">
-                      <el-input-number v-model="selfConfig.xAxis.axisLabel.fontSize" size="mini"
+                      <el-input-number v-model="selfConfig.xAxis.axisLabel.fontSize" size="mini" controls-position="right"
                                       :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                     <gui-inline label="颜色">
@@ -237,7 +237,7 @@
                     </gui-inline>
                   </gui-field>
                   <gui-field label="倾斜角度">
-                    <el-input-number v-model="selfConfig.xAxis.axisLabel.rotate" size="mini"
+                    <el-input-number v-model="selfConfig.xAxis.axisLabel.rotate" size="mini" controls-position="right"
                                     :min="0" :max="90" @on-change="setSelfProperty"></el-input-number>
                   </gui-field>
                   <gui-wrap label="轴线" v-model="selfConfig.xAxis.axisLine.show" @on-change="setSelfProperty">
@@ -262,7 +262,7 @@
                   </gui-field>
                   <gui-field label="文本">
                     <gui-inline label="字号">
-                      <el-input-number v-model="selfConfig.xAxis.axisLabel.fontSize" size="mini"
+                      <el-input-number v-model="selfConfig.xAxis.axisLabel.fontSize" size="mini" controls-position="right"
                                       :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                     <gui-inline label="颜色">
@@ -299,17 +299,17 @@
                   </gui-field>
                   <gui-field label="极值">
                     <gui-inline label="最小值">
-                      <el-input-number v-model="selfConfig.visualMap.min" size="mini" :min="0"
+                      <el-input-number v-model="selfConfig.visualMap.min" size="mini" :min="0" controls-position="right"
                                       @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                     <gui-inline label="最大值">
-                      <el-input-number v-model="selfConfig.visualMap.max" size="mini" :min="0"
+                      <el-input-number v-model="selfConfig.visualMap.max" size="mini" :min="0" controls-position="right"
                                       @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                   </gui-field>
                   <gui-field label="文本">
                     <gui-inline label="字号">
-                      <el-input-number v-model="selfConfig.visualMap.textStyle.fontSize" size="mini"
+                      <el-input-number v-model="selfConfig.visualMap.textStyle.fontSize" size="mini" controls-position="right"
                                       :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                     <gui-inline label="颜色">
@@ -319,11 +319,11 @@
                   </gui-field>
                   <gui-field label="图元大小">
                     <gui-inline label="最小值">
-                      <el-input-number v-model="selfConfig.visualMap.inRange.symbolSize[0]" size="mini" :min="0"
+                      <el-input-number v-model="selfConfig.visualMap.inRange.symbolSize[0]" size="mini" :min="0" controls-position="right"
                                       @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                     <gui-inline label="最大值">
-                      <el-input-number v-model="selfConfig.visualMap.inRange.symbolSize[1]" size="mini" :min="0"
+                      <el-input-number v-model="selfConfig.visualMap.inRange.symbolSize[1]" size="mini" :min="0" controls-position="right"
                                       @on-change="setSelfProperty"></el-input-number>
                     </gui-inline>
                   </gui-field>
@@ -338,13 +338,13 @@
                 </el-collapse-item>
                 <el-collapse-item title="地理坐标系" name="geo">
                   <gui-field label="视角缩放">
-                    <el-input-number v-model="selfConfig.geo.zoom" size="mini" :min="0" :step="0.1"
+                    <el-input-number v-model="selfConfig.geo.zoom" size="mini" :min="0" :step="0.1" controls-position="right"
                                     @on-change="setSelfProperty"></el-input-number>
                   </gui-field>
                   <gui-wrap label="文本" v-model="selfConfig.geo.label.normal.show" @on-change="setSelfProperty">
                     <gui-field label="文本">
                       <gui-inline label="字号">
-                        <el-input-number v-model="selfConfig.geo.label.normal.fontSize" size="mini"
+                        <el-input-number v-model="selfConfig.geo.label.normal.fontSize" size="mini" controls-position="right"
                                         :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="颜色">
@@ -356,7 +356,7 @@
                   <gui-wrap label="文本悬停" v-model="selfConfig.geo.label.emphasis.show" @on-change="setSelfProperty">
                     <gui-field label="文本">
                       <gui-inline label="字号">
-                        <el-input-number v-model="selfConfig.geo.label.emphasis.fontSize" size="mini"
+                        <el-input-number v-model="selfConfig.geo.label.emphasis.fontSize" size="mini" controls-position="right"
                                         :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="颜色">
@@ -394,7 +394,7 @@
                             v-model="selfConfig.series.label.show" @on-change="setSelfProperty">
                     <gui-field label="指标文本">
                       <gui-inline label="字号">
-                        <el-input-number v-model="selfConfig.series.label.fontSize" size="mini"
+                        <el-input-number v-model="selfConfig.series.label.fontSize" size="mini" controls-position="right"
                                         :min="12" :max="40" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="颜色">
@@ -418,7 +418,7 @@
                   </gui-wrap>
                   <gui-wrap label="区域渐变" :value="true" simple v-if="isLine">
                     <gui-field label="区域透明度">
-                      <el-input-number v-model="selfConfig.series.areaStyle.opacity" size="mini"
+                      <el-input-number v-model="selfConfig.series.areaStyle.opacity" size="mini" controls-position="right"
                                       :max="1" :step="0.1" @on-change="setSelfProperty"></el-input-number>
                     </gui-field>
                   </gui-wrap>
@@ -471,7 +471,7 @@
                     </gui-field>
                     <gui-field label="涟漪动画" v-if="selfConfig.series.type==='effectScatter'">
                       <gui-inline label="最大缩放比">
-                        <el-input-number v-model="selfConfig.series.rippleEffect.scale" size="mini"
+                        <el-input-number v-model="selfConfig.series.rippleEffect.scale" size="mini" controls-position="right"
                                         :step="0.5" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="波纹方式">
@@ -484,7 +484,7 @@
                     </gui-field>
                     <gui-field label="气泡悬停">
                       <gui-inline label="边框宽度">
-                        <el-input-number v-model="selfConfig.series.itemStyle.emphasis.borderWidth" size="mini"
+                        <el-input-number v-model="selfConfig.series.itemStyle.emphasis.borderWidth" size="mini" controls-position="right"
                                         :min="0" :max="2" @on-change="setSelfProperty"></el-input-number>
                       </gui-inline>
                       <gui-inline label="边框颜色" style="width:auto;">
@@ -552,7 +552,7 @@
   import GuiColors from './gui-colors'
   import { DEFAULT_COLORS } from '../../../utils/defaultColors'
   import { deepClone } from '../../../utils/deepClone'
-
+  import elScrollbar from '@/components/scrollbar/src/main'
   export default {
     name: 'BoardOptions',
     props: {
@@ -602,10 +602,10 @@
       },
       // 重置全局配置
       resetSetting () {
-        this.$loading.start()
+        // this.$loading.start()
         resetPageSettings().then(res => {
           this.$store.dispatch('SetPageSettings', res.data)
-          this.$loading.done()
+          // this.$loading.done()
         })
       },
       // 数据源改变事件
@@ -674,6 +674,6 @@
         return this.selfConfig.yAxis && (this.isLine || this.isHistogram)
       }
     },
-    components: { GuiGroup, GuiField, GuiInline, GuiColors, GuiWrap }
+    components: { GuiGroup, GuiField, GuiInline, GuiColors, GuiWrap ,elScrollbar}
   }
 </script>

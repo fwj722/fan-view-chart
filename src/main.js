@@ -18,7 +18,7 @@ Vue.use(ElementUI)
 Vue.use(VCharts)
 
 Vue.prototype.$EventBus = new Vue()
-Vue.prototype.$base = process.env.NODE_ENV === 'production' ? '/bin-data-site' : ''
+Vue.prototype.$base = process.env.NODE_ENV === 'production' ? '/el-data-site' : ''
 new Vue({
   router,
   store,
