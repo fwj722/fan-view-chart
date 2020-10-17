@@ -6,7 +6,7 @@
     >
       <div class="list-group-header"
            @mouseenter="hovered=true" @mouseleave="hovered=false">
-        <el-icon v-if="category.icon" :name="category.icon" size="18"></el-icon>
+        <i v-if="category.icon" :class="category.icon"></i>
         <span v-else>{{ category.title }}</span>
       </div>
       <div class="list-group-body" flex v-show="hovered" @mouseenter="hovered=true" @mouseleave="hovered=false">

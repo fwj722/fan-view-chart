@@ -64,14 +64,14 @@
           background-color: rgba(143, 255, 255, .1);
         }
         &.selected {
-          background-color: $color-blue;
+          background-color: #0862aa;
         }
       }
     }
   }
 }
 
-//  需要覆盖bin的样式
+
 .body-wrap .el-scrollbar__wrap {
   overflow-x: hidden;
 }

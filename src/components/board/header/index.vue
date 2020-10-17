@@ -11,18 +11,18 @@
     </div>
     <div class="right-box">
       <el-tooltip content="预览" placement="bottom">
-        <i class="el-icon-view" @click="openScreen"></i>
+        <i class="iconfont iconpreview" @click="openScreen"></i>
       </el-tooltip>
       <el-tooltip content="发布" placement="bottom">
-        <i class="el-icon-s-promotion"></i>
+        <i class="iconfont iconfabu1"></i>
       </el-tooltip>
       <el-tooltip content="个人中心" placement="bottom">
-        <i class="el-icon-s-custom"></i>
+        <i class="iconfont iconren"></i>
       </el-tooltip>
         <el-dropdown>
           <span class="el-dropdown-link">
              <el-tooltip content="主题" placement="bottom">
-               <i  class="el-icon-s-platform theme"></i>
+               <i  class="iconfont iconzhuti1 theme"></i>
             </el-tooltip>
           </span>
           <el-dropdown-menu slot="dropdown">

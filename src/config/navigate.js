@@ -4,7 +4,7 @@ const list = [
   {
     type: 'Basic',
     title: '基础',
-    icon: 'ios-browsers',
+    icon: 'el-icon-document-copy',
     children: [
       {
         title: '折线图',

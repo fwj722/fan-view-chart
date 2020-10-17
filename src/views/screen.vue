@@ -1,5 +1,6 @@
 <template>
   <div class="dv-screen">
+    <span class="goback" @click="back"> <i class="el-icon-arrow-left"></i> </span>
     <el-scrollbar style="height:100%;">
       <div class="canvas-panel" :style="canvasPanelStyle">
         <template v-for="transform in canvasMap">
@@ -49,6 +50,11 @@
       getCanvasMaps().then(res => {
         this.$store.dispatch('InitCanvasMaps', res.data)
       })
+    },
+    methods:{
+      back(){
+        this.$router.go(-1);//返回上一层
+      }
     }
   }
 </script>

@@ -9,6 +9,4 @@ db
   .defaults(database)
   .write()
 
-// db.set('canvasMaps', database.canvasMaps).write()
-
 export default db

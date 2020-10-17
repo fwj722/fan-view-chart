@@ -13,12 +13,12 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  // BinUI.LoadingBar.start()
+  // start()
   store.dispatch('SingleSelected', null)
   next()
 })
 router.afterEach(() => {
-  // BinUI.LoadingBar.done()
+  // done()
 })
 
 export default router

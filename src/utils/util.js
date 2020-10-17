@@ -224,6 +224,7 @@ util.typeOf = typeOf
 
 // 一个值是否在列表中
 export function oneOf(value, validList) {
+
   return validList.indexOf(value) > -1
 }
 

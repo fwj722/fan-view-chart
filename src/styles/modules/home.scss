@@ -5,20 +5,20 @@
     line-height: 60px;
     box-sizing: border-box;
     padding: 0 30px;
+    text-align: center;
     border-bottom: 1px solid $color-blue;
-    background: linear-gradient(180deg, transparent, #171b22);
+    background: linear-gradient(180deg, transparent, #005086);
     .head-title {
-      font-size: 24px;
-      font-weight: 600;
-      color: $color-blue;
-      background-image: -webkit-gradient(linear, left 0, right 0, from($color-primary), to($color-blue));
-      -webkit-background-clip: text;
+      font-size: 28px;
+      text-shadow: 1px 1px 2px black;
+      color: #79c3ff;
     }
   }
   .dv-container {
     width: 100%;
     height: calc(100vh - 60px);
     overflow: hidden;
+    background-color: #002e4e;
     .dv-ctrl {
       padding: 40px;
       text-align: center;
@@ -28,20 +28,28 @@
       .btn {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
         height: 184px;
         width: 258px;
         margin: 16px;
         border: 1px solid #00baff;
+        border-radius: 10px;
         font-size: 18px;
         color: #8eeeff;
         text-decoration: none;
         transition: all .3s;
-        background-image: linear-gradient(-90deg, rgba(0, 222, 255, .39) 0, rgba(0, 174, 255, .19) 100%);
+        background-image: linear-gradient(-60deg, rgba(0, 222, 255, .39) 0, rgba(0, 174, 255, .19) 100%);
         box-shadow: 0 0 10px 0 rgba(55, 224, 255, .3);
         cursor: pointer;
         &:hover {
           font-size: 20px;
+        }
+        .iconfont{
+          display: block;
+          font-size: 50px;
+          padding-bottom: 10px;
+          opacity: .4;
         }
       }
     }

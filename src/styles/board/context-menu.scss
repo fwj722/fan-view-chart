@@ -19,6 +19,10 @@
       line-height: 28px;
       width: 16px;
     }
+    [class*=" el-icon-"], [class^=el-icon-]{
+      line-height: 26px;
+      margin-right: 6px;
+    }
     &:hover {
       background-color: #1d262e;
       color: #00baff;

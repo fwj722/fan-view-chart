@@ -207,7 +207,7 @@
   }
 }
 
-// 需要覆盖bin的样式
+
 .options-body .el-scrollbar__wrap {
   overflow-x: hidden;
 }
@@ -243,7 +243,7 @@
   border-bottom: 1px solid #282f3a;
 }
 .options-body .el-collapse > .el-collapse-item {
-  border-top: 1px solid #282f3a;
+  // border-top: 1px solid #282f3a;
 }
 .options-body .el-collapse > .el-collapse-item:first-child {
   border-top: none;

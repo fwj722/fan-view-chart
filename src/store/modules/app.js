@@ -13,7 +13,6 @@ const app = {
       state.optionsExpand = !state.optionsExpand
     },
     SET_PAGE_SETTING: (state, setting) => {
-      console.log(setting.backgroundColor)
       state.pageSettings = { ...setting }
     }
   },
